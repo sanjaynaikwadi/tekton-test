@@ -7,7 +7,7 @@ spec:
     - name: IMAGE
       description: Image description
       type: string
-      default: "docker.io/snaikwadi/nodejs-app"
+      default: "docker.io/sanjaynaikwadi/nodejs-app"
     - name: TAG
       description: Preferred tag
       default: latest
