@@ -1,5 +1,6 @@
 FROM node:18-alpine
 
+RUN mkdir /usr/src/app && chown -R 1000700000:0 /usr/src/app
 # Create app directory
 WORKDIR /usr/src/app
 
