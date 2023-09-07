@@ -1,8 +1,9 @@
 FROM node:18-alpine
 
-RUN mkdir /usr/src/app && chown -R 1000700000:0 /usr/src/app
 # Create app directory
 WORKDIR /usr/src/app
+
+sudo chown -R 1000700000:0 "/.npm"
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
