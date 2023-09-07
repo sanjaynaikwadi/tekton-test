@@ -3,7 +3,6 @@ FROM node:18-alpine
 # Create app directory
 WORKDIR /usr/src/app
 
-sudo chown -R 1000700000:0 "/.npm"
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -11,6 +10,7 @@ sudo chown -R 1000700000:0 "/.npm"
 COPY package*.json ./
 
 RUN npm install
+RUN npm cache clean --force
 # If you are building your code for production
 # RUN npm ci --only=production
 
